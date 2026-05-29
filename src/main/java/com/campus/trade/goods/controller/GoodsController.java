@@ -33,7 +33,7 @@ public class GoodsController {
         return goodsService.review(goodsId, approved);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id:[0-9]+}")
     public ApiResult<Goods> detail(@PathVariable Long id) { return goodsService.detail(id); }
 
     @PostMapping("/create")
