@@ -105,14 +105,9 @@ public class UserService {
         if (req.getAccount() == null || req.getPassword() == null)
             return ApiResult.error(400, "请输入账号和密码");
 
-        Optional<User> userOpt;
-        if ("admin".equals(req.getRole())) {
-            userOpt = userRepository.findByUsernameAndRole(req.getAccount().trim(), "admin");
-        } else {
-            userOpt = userRepository.findByPhoneAndRole(req.getAccount().trim(), "user");
-            if (userOpt.isEmpty()) userOpt = userRepository.findByUsernameAndRole(req.getAccount().trim(), "user");
-        }
-        if (userOpt.isEmpty()) return ApiResult.error(400, "账号不存在或角色不匹配");
+        Optional<User> userOpt = userRepository.findByUsername(req.getAccount().trim());
+        if (userOpt.isEmpty()) userOpt = userRepository.findByPhone(req.getAccount().trim());
+        if (userOpt.isEmpty()) return ApiResult.error(400, "账号不存在");
         User user = userOpt.get();
 
         if (user.getStatus() == 1) return ApiResult.error(403, "账号已被禁用");

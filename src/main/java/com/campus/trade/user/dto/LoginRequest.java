@@ -7,6 +7,5 @@ import javax.validation.constraints.NotBlank;
 public class LoginRequest {
     @NotBlank private String account;
     @NotBlank private String password;
-    @NotBlank private String role;
     private Boolean rememberMe = false;
 }
