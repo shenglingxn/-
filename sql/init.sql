@@ -82,8 +82,6 @@ CREATE TABLE IF NOT EXISTS tb_message (
     created_at DATETIME,
     INDEX idx_from (from_user_id), INDEX idx_to (to_user_id), INDEX idx_read (is_read)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='消息表';
-<<<<<<< HEAD
-
 -- 收藏表
 CREATE TABLE IF NOT EXISTS tb_favorite (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -93,5 +91,3 @@ CREATE TABLE IF NOT EXISTS tb_favorite (
     UNIQUE KEY uk_user_goods (user_id, goods_id),
     INDEX idx_user (user_id), INDEX idx_goods (goods_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='收藏表';
-=======
->>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b

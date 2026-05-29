@@ -5,11 +5,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/campus_trade?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
-<<<<<<< HEAD
-    password: 112717
-=======
-    password: 你的数据库密码
->>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
+    password: 320723
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
