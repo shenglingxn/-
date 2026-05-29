@@ -523,7 +523,7 @@ function resetPublishForm(){
 }
 async function publishGoods(){
   var u=U();if(!u){openModal('loginModal');return}
-  var d={title:document.getElementById('pubTitle').value,category:document.getElementById('pubCategory').value,price:document.getElementById('pubPrice').value,description:document.getElementById('pubDesc').value,descriptionDetail:document.getElementById('pubDetail').value,contactPhone:document.getElementById('pubPhone').value,wechat:document.getElementById('pubWechat').value,location:document.getElementById('pubLocation').value}
+  var d={title:document.getElementById('pubTitle').value,category:document.getElementById('pubCategory').value,price:document.getElementById('pubPrice').value,description:document.getElementById('pubDesc').value,contactPhone:document.getElementById('pubPhone').value,wechat:document.getElementById('pubWechat').value,location:document.getElementById('pubLocation').value}
   if(!d.title||!d.price){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='请填写标题和价格';return}
   document.getElementById('pubAlert').className='alert';document.getElementById('pubAlert').textContent=''
   try{
@@ -533,10 +533,11 @@ async function publishGoods(){
     }
     d.images = imageUrls
     var r=await fetch(API+'/api/goods/create',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+T()},body:JSON.stringify(d)})
+    if(!r.ok){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ 服务器错误 '+(r.status)+'，请查看控制台';return}
     var rd=await r.json()
     if(rd.code===200){document.getElementById('pubAlert').className='alert s';document.getElementById('pubAlert').textContent='✅ 发布成功，等待管理员审核！';resetPublishForm();setTimeout(function(){switchTab('home')},800)}
     else{document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ '+(rd.message||'失败')}
-  }catch(e){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ '+(e.message||'网络错误')}
+  }catch(e){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ 网络错误，请确认已登录且后端服务已启动'}
 }
 
 // AUTH

@@ -27,12 +27,14 @@ public class GoodsController {
 
     @PostMapping("/create")
     public ApiResult<Goods> create(@RequestBody Goods goods, Authentication auth) {
+        if (auth == null) return ApiResult.error(401, "请先登录");
         goods.setUserId((Long) auth.getPrincipal());
         return goodsService.create(goods);
     }
 
     @GetMapping("/mine")
     public ApiResult<List<Goods>> myGoods(Authentication auth) {
+        if (auth == null) return ApiResult.error(401, "请先登录");
         return goodsService.myList((Long) auth.getPrincipal());
     }
 }
