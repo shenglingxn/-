@@ -22,6 +22,17 @@ public class GoodsController {
         return goodsService.list(page, size, category, keyword);
     }
 
+    @GetMapping("/pending")
+    public ApiResult<Page<Goods>> pending(@RequestParam(defaultValue = "0") int page,
+                                           @RequestParam(defaultValue = "50") int size) {
+        return goodsService.listPending(page, size);
+    }
+
+    @PostMapping("/review")
+    public ApiResult<Goods> review(@RequestParam Long goodsId, @RequestParam boolean approved) {
+        return goodsService.review(goodsId, approved);
+    }
+
     @GetMapping("/{id}")
     public ApiResult<Goods> detail(@PathVariable Long id) { return goodsService.detail(id); }
 
