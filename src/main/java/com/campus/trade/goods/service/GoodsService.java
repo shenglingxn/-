@@ -50,4 +50,16 @@ public class GoodsService {
             return ApiResult.success(goodsRepository.save(goods));
         }).orElse(ApiResult.error(404, "商品不存在"));
     }
+
+    public ApiResult<Page<Goods>> listOnSale(int page, int size) {
+        return ApiResult.success(goodsRepository.findByStatusOrderByCreatedAtDesc("onsale", PageRequest.of(page, size)));
+    }
+
+    public ApiResult<String> delist(Long id) {
+        return goodsRepository.findById(id).map(goods -> {
+            goods.setStatus("delisted");
+            goodsRepository.save(goods);
+            return ApiResult.success("已下架");
+        }).orElse(ApiResult.error(404, "商品不存在"));
+    }
 }

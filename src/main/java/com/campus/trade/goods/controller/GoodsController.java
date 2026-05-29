@@ -37,4 +37,15 @@ public class GoodsController {
         if (auth == null) return ApiResult.error(401, "请先登录");
         return goodsService.myList((Long) auth.getPrincipal());
     }
+
+    @GetMapping("/onsale")
+    public ApiResult<Page<Goods>> onsale(@RequestParam(defaultValue = "0") int page,
+                                          @RequestParam(defaultValue = "50") int size) {
+        return goodsService.listOnSale(page, size);
+    }
+
+    @PostMapping("/delist")
+    public ApiResult<String> delist(@RequestParam Long goodsId) {
+        return goodsService.delist(goodsId);
+    }
 }
