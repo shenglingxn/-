@@ -3,6 +3,7 @@ package com.campus.trade.config;
 import com.campus.trade.security.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -33,8 +34,8 @@ public class SecurityConfig {
                 .antMatchers("/", "/index.html", "/favicon.ico").permitAll()
                 .antMatchers("/css/**", "/js/**", "/img/**").permitAll()
                 .antMatchers("/api/user/register", "/api/user/login", "/api/user/send-code").permitAll()
-                .antMatchers("/api/goods/list").permitAll()
-                .regexMatchers("/api/goods/[0-9]+").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .antMatchers("/api/goods/list", "/api/goods/*").permitAll()
                 .antMatchers("/api/admin/**").hasRole("admin")
                 .anyRequest().authenticated()
             .and()
