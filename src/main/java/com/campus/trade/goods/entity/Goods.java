@@ -13,6 +13,7 @@ public class Goods {
     @Column(name = "user_id") private Long userId;
     @Column(nullable = false, length = 100) private String title;
     @Column(columnDefinition = "TEXT") private String description;
+    @Column(name = "description_detail", columnDefinition = "TEXT") private String descriptionDetail;
     @Column(length = 50) private String category;
     @Column(nullable = false) private BigDecimal price;
     @Column(columnDefinition = "TEXT") private String images;

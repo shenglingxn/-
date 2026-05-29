@@ -35,4 +35,27 @@ public class GoodsController {
     public ApiResult<List<Goods>> myGoods(Authentication auth) {
         return goodsService.myList((Long) auth.getPrincipal());
     }
+
+    @GetMapping("/pending")
+    public ApiResult<Page<Goods>> pendingGoods(@RequestParam(defaultValue = "0") int page,
+                                               @RequestParam(defaultValue = "20") int size) {
+        return goodsService.listPending(page, size);
+    }
+
+    @PostMapping("/review")
+    public ApiResult<Goods> reviewGoods(@RequestParam Long goodsId,
+                                        @RequestParam boolean approved) {
+        return goodsService.review(goodsId, approved);
+    }
+
+    @GetMapping("/onsale")
+    public ApiResult<Page<Goods>> onsaleGoods(@RequestParam(defaultValue = "0") int page,
+                                              @RequestParam(defaultValue = "50") int size) {
+        return goodsService.listOnsale(page, size);
+    }
+
+    @PostMapping("/delist")
+    public ApiResult<?> delistGoods(@RequestParam Long goodsId) {
+        return goodsService.delist(goodsId);
+    }
 }

@@ -9,4 +9,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     Page<Order> findByBuyerIdOrderByCreatedAtDesc(Long buyerId, Pageable pageable);
     Page<Order> findBySellerIdOrderByCreatedAtDesc(Long sellerId, Pageable pageable);
     Page<Order> findByBuyerIdAndStatusOrderByCreatedAtDesc(Long buyerId, String status, Pageable pageable);
+    boolean existsByGoodsId(Long goodsId);
 }
