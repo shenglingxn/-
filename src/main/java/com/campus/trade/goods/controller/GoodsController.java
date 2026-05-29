@@ -35,6 +35,7 @@ public class GoodsController {
     public ApiResult<List<Goods>> myGoods(Authentication auth) {
         return goodsService.myList((Long) auth.getPrincipal());
     }
+<<<<<<< HEAD
 
     @GetMapping("/pending")
     public ApiResult<Page<Goods>> pendingGoods(@RequestParam(defaultValue = "0") int page,
@@ -58,4 +59,6 @@ public class GoodsController {
     public ApiResult<?> delistGoods(@RequestParam Long goodsId) {
         return goodsService.delist(goodsId);
     }
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 }

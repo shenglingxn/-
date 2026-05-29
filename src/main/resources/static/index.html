@@ -32,7 +32,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .ginfo{flex:1;min-width:0}
 .gtitle{font-size:15px;font-weight:600;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .gprice{color:var(--rose-dark);font-weight:700;font-size:18px;margin-top:4px}
+<<<<<<< HEAD
 .gprice .cat-tag{font-weight:400;font-size:12px;color:var(--muted);margin-left:4px}
+=======
+.gprice s{font-weight:400;font-size:12px;color:var(--muted);margin-left:4px}
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 .gmeta{display:flex;gap:10px;margin-top:4px;font-size:12px;color:var(--muted)}
 .tabbar{position:fixed;bottom:0;left:0;right:0;background:var(--card);display:flex;border-top:1px solid var(--border);z-index:100;padding:6px 0 calc(6px+env(safe-area-inset-bottom))}
 .ti{flex:1;text-align:center;padding:4px 0;font-size:10px;color:var(--muted);cursor:pointer;transition:.2s}
@@ -46,8 +50,13 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .form-section{padding:8px 20px 20px}
 .fg{margin-bottom:18px}
 .fg label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px}
+<<<<<<< HEAD
 .fg input,.fg select,.fg textarea{width:100%;padding:13px 14px;border:1.5px solid var(--border);border-radius:11px;font-size:15px;outline:none;background:var(--card);transition:.2s}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(232,166,155,0.1)}
+=======
+.fg input,.fg select{width:100%;padding:13px 14px;border:1.5px solid var(--border);border-radius:11px;font-size:15px;outline:none;background:var(--card);transition:.2s}
+.fg input:focus,.fg select:focus{border-color:var(--rose);box-shadow:0 0 0 3px rgba(232,166,155,0.1)}
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 .fr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .empty{padding:80px 20px;text-align:center}
 .empty .ea{font-size:56px;margin-bottom:16px;opacity:.5}
@@ -80,6 +89,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .detail-desc{background:var(--ivory);padding:14px;border-radius:11px;font-size:14px;line-height:1.7;margin:10px 0}
 .detail-meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:10px;padding:6px 0}
 .detail-actions{display:flex;gap:10px;margin-top:14px}
+<<<<<<< HEAD
 .fav-row{margin-top:14px}
 .fav-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;padding:13px;border:1.5px solid var(--border);border-radius:12px;font-size:15px;font-weight:500;cursor:pointer;background:var(--card);color:var(--muted);transition:.2s}
 .fav-btn:active{transform:scale(0.97)}
@@ -88,6 +98,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .cat-row{display:flex;gap:6px;padding:4px 20px 6px;overflow-x:auto;scrollbar-width:none}
 .cat-row::-webkit-scrollbar{display:none}
 .cat-row+.cat-row{padding-top:0;padding-bottom:12px}
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 .ir{margin:14px 0}.ir div{display:flex;padding:12px 0;border-bottom:1px solid var(--ivory);font-size:14px}.ir div:last-child{border-bottom:none}.ir .l{color:var(--muted);width:80px;flex-shrink:0;font-size:13px}.ir .v{font-weight:500}
 .profile-empty{padding:100px 24px;text-align:center}
 .profile-empty .ac{width:88px;height:88px;border-radius:50%;background:var(--rose-light);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-size:38px}
@@ -125,6 +137,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .chat-order-card .co-actions{display:flex;gap:8px;margin-top:6px}
 .chat-order-card .co-actions button{flex:1;padding:7px;border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}
 
+<<<<<<< HEAD
 .img-upload-area{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .img-upload-hint{font-size:11px;color:var(--muted);margin-bottom:8px;line-height:1.5}
 .img-upload-box{width:72px;height:72px;border-radius:12px;border:1.5px dashed var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.2s;flex-shrink:0;overflow:hidden;position:relative;background:var(--card)}
@@ -135,6 +148,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
 .img-upload-box:hover .img-delete{display:block}
 .img-upload-box.has-img{border-style:solid;border-color:var(--border)}
 
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 @media(min-width:500px){body{max-width:420px;margin:0 auto;border-left:1px solid var(--border);border-right:1px solid var(--border);min-height:100vh;background:var(--card)}}
 </style>
 </head>
@@ -148,6 +163,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
     <input id="searchInput" placeholder="搜索商品..." onkeydown="if(event.key=='Enter')searchGoods()">
     <button class="sb" onclick="searchGoods()">搜索</button>
   </div>
+<<<<<<< HEAD
   <div id="catTags">
     <div class="cat-row">
       <span class="cat active" onclick="filterCat('')">全部</span>
@@ -159,6 +175,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
       <span class="cat" onclick="filterCat('生活用品')">🏡 生活</span>
       <span class="cat" onclick="filterCat('服饰美妆')">👗 服饰</span>
     </div>
+=======
+  <div class="categories" id="catTags">
+    <span class="cat active" onclick="filterCat('')">全部</span>
+    <span class="cat" onclick="filterCat('教材教辅')">📖 教材</span>
+    <span class="cat" onclick="filterCat('电子数码')">💻 数码</span>
+    <span class="cat" onclick="filterCat('生活用品')">🏡 生活</span>
+    <span class="cat" onclick="filterCat('服饰美妆')">👗 服饰</span>
+    <span class="cat" onclick="filterCat('体育用品')">⚽ 体育</span>
+    <span class="cat" onclick="filterCat('其他')">📎 其他</span>
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
   </div>
   <div class="goods-grid" id="goodsList"></div>
 </div>
@@ -178,6 +204,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
     <div id="pubAlert" class="alert"></div>
     <div class="fg"><label>标题</label><input id="pubTitle" placeholder="如：高等数学第七版 九成新"></div>
     <div class="fr"><div class="fg"><label>分类</label><select id="pubCategory"><option>教材教辅</option><option>电子数码</option><option>生活用品</option><option>服饰美妆</option><option>体育用品</option><option>其他</option></select></div><div class="fg"><label>价格</label><input id="pubPrice" type="number" step="0.01" placeholder="0.00"></div></div>
+<<<<<<< HEAD
     <div class="fg"><label>描述</label><input id="pubDesc" placeholder="简要描述新旧程度等"></div>
     <div class="fg"><label>详细信息</label><textarea id="pubDetail" placeholder="详细描述商品的使用情况、瑕疵、配件等（选填）" rows="4" style="resize:vertical;font-family:inherit"></textarea></div>
     <div class="fr"><div class="fg"><label>电话</label><input id="pubPhone" placeholder="手机号"></div><div class="fg"><label>微信</label><input id="pubWechat" placeholder="微信号(选填)"></div></div>
@@ -192,6 +219,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Ne
       <input type="file" id="imageFileInput" accept="image/jpeg,image/png,image/gif,image/bmp,image/webp" multiple style="display:none" onchange="handleImageSelect(event)">
     </div>
     <div id="pubUploadStatus" style="font-size:12px;color:var(--muted);margin-bottom:12px;display:none"></div>
+=======
+    <div class="fg"><label>描述</label><input id="pubDesc" placeholder="描述新旧程度等"></div>
+    <div class="fr"><div class="fg"><label>电话</label><input id="pubPhone" placeholder="手机号"></div><div class="fg"><label>微信</label><input id="pubWechat" placeholder="微信号(选填)"></div></div>
+    <div class="fg"><label>位置</label><input id="pubLocation" placeholder="如：主校区"></div>
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
     <button class="btn btn-primary" onclick="publishGoods()" style="margin-top:6px">发布</button>
   </div>
 </div>
@@ -264,6 +296,7 @@ function filterCat(c){curCat=c;document.querySelectorAll('.cat').forEach(t=>t.cl
 function searchGoods(){curKw=document.getElementById('searchInput').value;loadGoods()}
 async function loadGoods(){
   const el=document.getElementById('goodsList');el.innerHTML='<div class="spinner"></div>'
+<<<<<<< HEAD
   if(curCat==='favorites'){
     const u=U();if(!u){el.innerHTML='<div class="empty"><div class="ea">⭐</div><h3>请先登录</h3><p>登录后查看收藏商品</p></div>';return}
     try{
@@ -281,6 +314,8 @@ async function loadGoods(){
     }catch(e){el.innerHTML='<div class="empty"><div class="ea">😶</div><h3>网络开小差了</h3></div>'}
     return
   }
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
   let u=`${API}/api/goods/list?page=0&size=50`
   if(curCat)u+=`&category=${curCat}`;if(curKw)u+=`&keyword=${curKw}`
   try{
@@ -290,8 +325,12 @@ async function loadGoods(){
       el.innerHTML=d.data.content.map(g=>{
         const ic=g.category==='教材教辅'?'📖':g.category==='电子数码'?'💻':g.category==='生活用品'?'🏡':g.category==='服饰美妆'?'👗':g.category==='体育用品'?'⚽':'📎'
         const cl=g.category==='教材教辅'?'b1':g.category==='电子数码'?'b2':g.category==='生活用品'?'b3':g.category==='服饰美妆'?'b4':g.category==='体育用品'?'b5':'b6'
+<<<<<<< HEAD
         const imgHtml=g.images&&g.images.length>0?`<img src="${API+g.images.split(',')[0]}" style="width:68px;height:68px;border-radius:12px;object-fit:cover;flex-shrink:0" onerror="this.parentNode.querySelector('.gicon').style.display='flex';this.style.display='none'"><div class="gicon ${cl}" style="display:none">${ic}</div>`:`<div class="gicon ${cl}">${ic}</div>`
         return `<div class="gc" onclick="showDetail(${g.id})"><div class="gci">${imgHtml}<div class="ginfo"><div class="gtitle">${g.title}</div><div class="gprice">¥${g.price}<span class="cat-tag">${g.category||''}</span></div><div class="gmeta"><span>📍 ${g.location||'校内'}</span><span class="tag g">在售</span></div></div></div></div>`
+=======
+        return `<div class="gc" onclick="showDetail(${g.id})"><div class="gci"><div class="gicon ${cl}">${ic}</div><div class="ginfo"><div class="gtitle">${g.title}</div><div class="gprice">¥${g.price}<s>${g.category||''}</s></div><div class="gmeta"><span>📍 ${g.location||'校内'}</span><span class="tag g">在售</span></div></div></div></div>`
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
       }).join('')
     }else{el.innerHTML='<div class="empty"><div class="ea">😶</div><h3>加载失败</h3></div>'}
   }catch(e){el.innerHTML='<div class="empty"><div class="ea">😶</div><h3>网络开小差了</h3></div>'}
@@ -305,6 +344,7 @@ async function showDetail(id){
       const ic=g.category==='教材教辅'?'📖':g.category==='电子数码'?'💻':g.category==='生活用品'?'🏡':g.category==='服饰美妆'?'👗':g.category==='体育用品'?'⚽':'📎'
       const bg=g.category==='教材教辅'?'#F5F0EB':g.category==='电子数码'?'#F0F3F7':g.category==='生活用品'?'#F0F7F2':g.category==='服饰美妆'?'#FDF0ED':g.category==='体育用品'?'#F5F0EB':'#F9F4F0'
       const own=u&&g.userId==u.userId
+<<<<<<< HEAD
       let favHtml=''
       if(u&&!own){
         try{
@@ -321,11 +361,15 @@ async function showDetail(id){
         bannerHtml=`<div style="width:100%;height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;background:${bg}">${ic}</div>`
       }
       document.getElementById('detailContent').innerHTML=`<div class="mi"></div><div class="detail-banner" style="padding:0;height:auto">${bannerHtml}</div><div class="detail-title">${g.title}</div><div class="detail-price">¥${g.price}</div>${g.description?`<div class="detail-desc">${g.description}</div>`:''}${g.descriptionDetail?`<div class="detail-desc" style="white-space:pre-wrap;word-break:break-word">${g.descriptionDetail}</div>`:''}<div class="detail-meta"><span>📞 ${g.contactPhone||'未填'}</span>${g.wechat?`<span>💬 ${g.wechat}</span>`:''}<span>📍 ${g.location||'校内'}</span></div>${favHtml}<div class="detail-actions">${own?'<div style="padding:15px;border-radius:12px;background:var(--ivory);text-align:center;font-size:14px;color:var(--muted);width:100%">这是我的商品</div>':`<button class="btn btn-primary" onclick="contactSeller(${g.id},${g.userId},'${g.title.replace(/'/g,"\\'")}')">💬 联系卖家</button>`}<button class="btn btn-outline" onclick="closeModal('detailModal')">关闭</button></div>`
+=======
+      document.getElementById('detailContent').innerHTML=`<div class="mi"></div><div class="detail-banner" style="background:${bg}">${ic}</div><div class="detail-title">${g.title}</div><div class="detail-price">¥${g.price}</div>${g.description?`<div class="detail-desc">${g.description}</div>`:''}<div class="detail-meta"><span>📞 ${g.contactPhone||'未填'}</span>${g.wechat?`<span>💬 ${g.wechat}</span>`:''}<span>📍 ${g.location||'校内'}</span></div><div class="detail-actions">${own?'<div style="padding:15px;border-radius:12px;background:var(--ivory);text-align:center;font-size:14px;color:var(--muted);width:100%">这是我的商品</div>':`<button class="btn btn-primary" onclick="contactSeller(${g.id},${g.userId},'${g.title.replace(/'/g,"\\'")}')">💬 联系卖家</button>`}<button class="btn btn-outline" onclick="closeModal('detailModal')">关闭</button></div>`
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
       openModal('detailModal')
     }
   }catch(e){}
 }
 
+<<<<<<< HEAD
 function toggleFavorite(goodsId){
   const u=U();if(!u){openModal('loginModal');return}
   fetch(`${API}/api/favorite/toggle?goodsId=${goodsId}`,{method:'POST',headers:{'Authorization':'Bearer '+T()}})
@@ -341,6 +385,8 @@ function toggleFavorite(goodsId){
   }).catch(()=>{})
 }
 
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 // CHAT
 let chatTarget=null,chatGoodsId=null,chatGoodsTitle='',chatPoll=null
 function contactSeller(gid,sid,title){
@@ -424,6 +470,7 @@ async function loadConvs(){
 }
 
 // PUBLISH
+<<<<<<< HEAD
 var selectedFiles = []
 function handleImageSelect(event) {
   var files = event.target.files
@@ -537,6 +584,18 @@ async function publishGoods(){
     if(rd.code===200){document.getElementById('pubAlert').className='alert s';document.getElementById('pubAlert').textContent='✅ 发布成功，等待管理员审核！';resetPublishForm();setTimeout(function(){switchTab('home')},800)}
     else{document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ '+(rd.message||'失败')}
   }catch(e){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ '+(e.message||'网络错误')}
+=======
+async function publishGoods(){
+  const u=U();if(!u){openModal('loginModal');return}
+  const d={title:document.getElementById('pubTitle').value,category:document.getElementById('pubCategory').value,price:document.getElementById('pubPrice').value,description:document.getElementById('pubDesc').value,contactPhone:document.getElementById('pubPhone').value,wechat:document.getElementById('pubWechat').value,location:document.getElementById('pubLocation').value}
+  if(!d.title||!d.price){alert('请填写标题和价格');return}
+  try{
+    const r=await fetch(`${API}/api/goods/create`,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+T()},body:JSON.stringify(d)})
+    const rd=await r.json()
+    if(rd.code===200){document.getElementById('pubAlert').className='alert s';document.getElementById('pubAlert').textContent='✅ 发布成功！';setTimeout(()=>switchTab('home'),800)}
+    else{document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ '+(rd.message||'失败')}
+  }catch(e){document.getElementById('pubAlert').className='alert e';document.getElementById('pubAlert').textContent='❌ 网络错误'}
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 }
 
 // AUTH
@@ -603,11 +662,16 @@ function renderProfile(){
   const u=U();const t=T();const c=document.getElementById('profileContent')
   if(!t||!u){c.innerHTML=`<div class="profile-empty"><div class="ac">👤</div><h2>未登录</h2><p>登录后发布商品、管理订单</p><button class="btn btn-primary" style="width:200px;display:inline-block" onclick="openModal('loginModal')">登录/注册</button></div>`;return}
   const bc=u.authStatus===1?'v':'';const bt=u.authStatus===1?'✅ 已认证':u.authStatus===2?'❌ 认证失败':'⏳ 未认证'
+<<<<<<< HEAD
   c.innerHTML=`<div class="profile-hero"><div class="pha">👤</div><div class="phn">${u.username}</div><div class="phs">${u.role==='admin'?'管理员':'普通用户'} · 信用 ${u.creditScore||100}</div><div><span class="profile-badge ${bc}">${bt}</span></div></div><div class="ms"><div class="mc"><div class="mi2" onclick="showMine()"><span class="mi2i">📦</span>我的发布<span class="mi2a">→</span></div><div class="mi2" onclick="switchTab('orders')"><span class="mi2i">📋</span>我的订单<span class="mi2a">→</span></div><div class="mi2" onclick="showAuth()"><span class="mi2i">🎓</span>校园认证<span class="mi2a">→</span></div>${u.role==='admin'?`<div class="mi2" onclick="showAdminAuth()"><span class="mi2i">⚙️</span>审核认证<span class="mi2a">→</span></div><div class="mi2" onclick="showAdminGoods()"><span class="mi2i">📦</span>审核商品<span class="mi2a">→</span></div><div class="mi2" onclick="showAdminDelist()"><span class="mi2i">🗑️</span>下架管理<span class="mi2a">→</span></div>`:''}</div><div class="mc"><div class="mi2" onclick="showUserInfo()"><span class="mi2i">👤</span>个人信息<span class="mi2a">→</span></div></div></div><div class="lw"><div class="lobtn" onclick="logout()">退出登录</div></div>`
+=======
+  c.innerHTML=`<div class="profile-hero"><div class="pha">👤</div><div class="phn">${u.username}</div><div class="phs">${u.role==='admin'?'管理员':'普通用户'} · 信用 ${u.creditScore||100}</div><div><span class="profile-badge ${bc}">${bt}</span></div></div><div class="ms"><div class="mc"><div class="mi2" onclick="showMine()"><span class="mi2i">📦</span>我的发布<span class="mi2a">→</span></div><div class="mi2" onclick="switchTab('orders')"><span class="mi2i">📋</span>我的订单<span class="mi2a">→</span></div><div class="mi2" onclick="showAuth()"><span class="mi2i">🎓</span>校园认证<span class="mi2a">→</span></div>${u.role==='admin'?`<div class="mi2" onclick="showAdminAuth()"><span class="mi2i">⚙️</span>审核认证<span class="mi2a">→</span></div>`:''}</div><div class="mc"><div class="mi2" onclick="showUserInfo()"><span class="mi2i">👤</span>个人信息<span class="mi2a">→</span></div></div></div><div class="lw"><div class="lobtn" onclick="logout()">退出登录</div></div>`
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 }
 function showMine(){
   fetch(`${API}/api/goods/mine`,{headers:{'Authorization':'Bearer '+T()}}).then(r=>r.json()).then(d=>{
     if(d.code===200&&d.data){
+<<<<<<< HEAD
       const h=d.data.map(g=>{
         const st=g.status==='onsale'?'g':g.status==='pending'?'y':'r'
         const stText=g.status==='onsale'?'在售':g.status==='pending'?'待审核':'已拒绝'
@@ -616,6 +680,9 @@ function showMine(){
         const imgHtml=g.images&&g.images.length>0?`<img src="${API+g.images.split(',')[0]}" style="width:56px;height:56px;border-radius:12px;object-fit:cover;flex-shrink:0" onerror="this.parentNode.querySelector('.gicon').style.display='flex';this.style.display='none'"><div class="gicon ${cl}" style="width:56px;height:56px;font-size:22px;display:none">${ic}</div>`:`<div class="gicon ${cl}" style="width:56px;height:56px;font-size:22px">${ic}</div>`
         return `<div class="gc"><div class="gci">${imgHtml}<div class="ginfo"><div class="gtitle">${g.title}</div><div class="gprice" style="font-size:14px">¥${g.price}</div><div class="gmeta"><span class="tag ${st}">${stText}</span></div></div></div></div>`
       }).join('')||'<div class="empty"><div class="ea">📦</div><h3>暂无发布</h3></div>'
+=======
+      const h=d.data.map(g=>`<div class="gc"><div class="gci"><div class="gicon b6" style="width:56px;height:56px;font-size:22px">📦</div><div class="ginfo"><div class="gtitle">${g.title}</div><div class="gprice" style="font-size:14px">¥${g.price}</div><div class="gmeta"><span class="tag ${g.status==='onsale'?'g':'r'}">${g.status==='onsale'?'在售':'已下架'}</span></div></div></div></div>`).join('')||'<div class="empty"><div class="ea">📦</div><h3>暂无发布</h3></div>'
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
       document.getElementById('detailContent').innerHTML=`<div class="mi"></div><div class="mt">📦 我的发布</div>${h}<div class="btn btn-outline" onclick="closeModal('detailModal')">关闭</div>`;openModal('detailModal')
     }
   })
@@ -682,6 +749,7 @@ function showModalText(title,text){
   document.getElementById('detailContent').innerHTML=`<div class=mi></div><div class=mt>${title}</div><div style=padding:30px;text-align:center;color:var(--muted)>${text}</div><button class='btn btn-outline' onclick='closeModal(\"detailModal\")'>关闭</button>`
   openModal('detailModal')
 }
+<<<<<<< HEAD
 
 function showAdminGoods(){
   fetch(API+'/api/goods/pending?page=0&size=50',{headers:{'Authorization':'Bearer '+T()}})
@@ -691,10 +759,23 @@ function showAdminGoods(){
     if(!d.data||!d.data.content){showModalText('📦 审核商品','暂无待审核商品');return}
     if(d.data.content.length===0){
       showModalText('📦 审核商品','暂无待审核商品')
+=======
+// INIT
+
+// ADMIN
+function showAdminAuth(){
+  fetch(API+'/api/admin/auth/pending?page=0&size=20',{headers:{'Authorization':'Bearer '+T()}})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.code!==200||!d.data||!d.data.content)return
+    if(d.data.content.length===0){
+      showModalText('⚙⚙⚙ 审核认证','暂无待审核申请')
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
       return
     }
     var list=''
     for(var i=0;i<d.data.content.length;i++){
+<<<<<<< HEAD
       var g=d.data.content[i]
       var catIcon=g.category==='教材教辅'?'📖':g.category==='电子数码'?'💻':g.category==='生活用品'?'🏡':g.category==='服饰美妆'?'👗':g.category==='体育用品'?'⚽':'📎'
       list+='<div style=background:var(--ivory);border-radius:12px;padding:14px;margin-bottom:10px>'
@@ -711,15 +792,36 @@ function showAdminGoods(){
     document.getElementById('detailContent').innerHTML='<div class=mi></div><div class=mt>📦 审核商品</div><div style=max-height:60vh;overflow-y:auto>'+list
     openModal('detailModal')
     var btns=document.querySelectorAll('.admin-goods-btn')
+=======
+      var a=d.data.content[i]
+      list+='<div style=background:var(--ivory);border-radius:12px;padding:14px;margin-bottom:10px>'
+      list+='<div style=font-size:14px;font-weight:600>用户 #'+a.userId+'</div>'
+      list+='<div style=font-size:13px;color:var(--muted);margin:4px 0>学号: '+a.studentId+' | 姓名: '+a.realName+'</div>'
+      if(a.createdAt){list+='<div style=font-size:12px;color:var(--muted)>提交: '+new Date(a.createdAt).toLocaleString('zh-CN')+'</div>'}
+      list+='<div style=display:flex;gap:8px;margin-top:8px>'
+      list+='<button class=admin-auth-btn data-id='+a.id+' data-approved=true style=flex:1;padding:8px;border:none;border-radius:8px;background:var(--success);color:#fff;font-weight:600;cursor:pointer>✅ 通过</button>'
+      list+='<button class=admin-auth-btn data-id='+a.id+' data-approved=false style=flex:1;padding:8px;border:none;border-radius:8px;background:var(--error);color:#fff;font-weight:600;cursor:pointer>❌ 拒绝</button></div></div>'
+    }
+    list+="<button class=\"btn btn-outline\" onclick=\"closeModal('detailModal')\">关闭</button>" 
+    document.getElementById('detailContent').innerHTML='<div class=mi></div><div class=mt>⚙⚙⚙ 审核认证</div><div style=max-height:60vh;overflow-y:auto>'+list
+    openModal('detailModal')
+    // Add event listeners
+    var btns=document.querySelectorAll('.admin-auth-btn')
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
     for(var j=0;j<btns.length;j++){
       btns[j].addEventListener('click',function(){
         var id=this.getAttribute('data-id')
         var approved=this.getAttribute('data-approved')==='true'
+<<<<<<< HEAD
         doGoodsReview(id,approved)
+=======
+        doReview(id,approved)
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
       })
     }
   })
 }
+<<<<<<< HEAD
 function doGoodsReview(gid,approved){
   fetch(API+'/api/goods/review?goodsId='+gid+'&approved='+approved,{method:'POST',headers:{'Authorization':'Bearer '+T()}})
   .then(function(r){return r.json()})
@@ -768,6 +870,22 @@ function doDelist(gid){
     if(d.code===200){alert('✅ '+d.data);showAdminDelist()}
     else{alert('❌ '+(d.message||'失败'))}
   })
+=======
+function doReview(aid,approved){
+  var comment=''
+  if(!approved){comment=prompt('拒绝原因')||'认证信息不符'}
+  if(comment===null)return
+  fetch(API+'/api/admin/auth/review?authId='+aid+'&approved='+approved+'&comment='+encodeURIComponent(comment),{method:'POST',headers:{'Authorization':'Bearer '+T()}})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.code===200){alert('✅ '+d.data);closeModal('detailModal')}
+    else{alert('❌ '+d.message)}
+  })
+}
+function showModalText(title,text){
+  document.getElementById('detailContent').innerHTML=`<div class=mi></div><div class=mt>${title}</div><div style=padding:30px;text-align:center;color:var(--muted)>${text}</div><button class='btn btn-outline' onclick='closeModal(\"detailModal\")'>关闭</button>`
+  openModal('detailModal')
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 }
 // INIT
 document.addEventListener('DOMContentLoaded',()=>{loadGoods();renderProfile();setInterval(()=>{if(T()){fetch(`${API}/api/message/unread`,{headers:{'Authorization':'Bearer '+T()}}).then(r=>r.json()).then(d=>{if(d.code===200&&d.data>0){document.getElementById('unreadBadge').style.display='block';document.getElementById('unreadBadge').textContent=d.data}else{document.getElementById('unreadBadge').style.display='none'}}).catch(()=>{})}},5000)})

@@ -3,7 +3,10 @@ package com.campus.trade.goods.service;
 import com.campus.trade.common.ApiResult;
 import com.campus.trade.goods.entity.Goods;
 import com.campus.trade.goods.repository.GoodsRepository;
+<<<<<<< HEAD
 import com.campus.trade.order.repository.OrderRepository;
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -12,8 +15,12 @@ import java.util.List;
 @Service
 public class GoodsService {
     private final GoodsRepository goodsRepository;
+<<<<<<< HEAD
     private final OrderRepository orderRepository;
     public GoodsService(GoodsRepository gr, OrderRepository or) { goodsRepository = gr; orderRepository = or; }
+=======
+    public GoodsService(GoodsRepository gr) { goodsRepository = gr; }
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 
     public ApiResult<Page<Goods>> list(int page, int size, String category, String keyword) {
         var p = PageRequest.of(page, size);
@@ -34,13 +41,18 @@ public class GoodsService {
     }
 
     public ApiResult<Goods> create(Goods goods) {
+<<<<<<< HEAD
         goods.setStatus("pending");
+=======
+        goods.setStatus("onsale");
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
         return ApiResult.success(goodsRepository.save(goods));
     }
 
     public ApiResult<List<Goods>> myList(Long userId) {
         return ApiResult.success(goodsRepository.findByUserIdOrderByCreatedAtDesc(userId, PageRequest.of(0, 100)).getContent());
     }
+<<<<<<< HEAD
 
     public ApiResult<Page<Goods>> listPending(int page, int size) {
         return ApiResult.success(goodsRepository.findByStatusOrderByCreatedAtDesc("pending", PageRequest.of(page, size)));
@@ -72,4 +84,6 @@ public class GoodsService {
         goodsRepository.save(goods);
         return ApiResult.success("下架成功");
     }
+=======
+>>>>>>> 464492e47d40cf433f66cc94246af5cfd132a45b
 }
